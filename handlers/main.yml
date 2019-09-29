@@ -1,0 +1,7 @@
+---
+- name: restart rabbitmq_exporter
+  become: true
+  systemd:
+    daemon_reload: true
+    name: rabbitmq_exporter
+    state: restarted
